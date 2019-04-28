@@ -36,8 +36,22 @@ module.exports = {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    // Doc: https://github.com/vaso2/nuxt-fontawesome
+    'nuxt-fontawesome'
   ],
+
+  /*
+   ** Font-Awesome Icon Sets
+   */
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faBars']
+      }
+    ]
+  },
 
   /*
    ** Build configuration
