@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 $primary-color: #159eee;
 $max-height: 60px;
-$toggle-width: 1024px;
+$toggle-width: 1200px;
 
 @media (max-width: $toggle-width) {
   .navbar {
@@ -99,7 +99,6 @@ $toggle-width: 1024px;
   border-radius: 0;
   box-shadow: 0 1px 2px 0 rgba(50, 50, 50, 0.15);
   transition: background-color 0.3s ease-out;
-  margin-bottom: 60px;
   .container {
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   }
@@ -167,7 +166,7 @@ $toggle-width: 1024px;
   a {
     display: inline-block;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 0 8px;
@@ -214,7 +213,7 @@ $toggle-width: 1024px;
         white-space: nowrap;
         display: block;
         min-width: 150px;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color: #9da7ad;
         border-bottom: 1px solid #f8f9fa;

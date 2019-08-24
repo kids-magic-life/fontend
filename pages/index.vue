@@ -1,59 +1,25 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        Kids-Magic-Life
-      </h1>
-      <h2 class="subtitle">
-        Kids Magic Life Front-End
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
+  <header>
+    <b-carousel
+      id="carousel"
+      :interval="4000"
+      controls
+      indicators
+      img-height="625"
+      img-width="20"
+    >
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52" />
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=53" />
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54" />
+    </b-carousel>
+  </header>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
-
-<style>
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style lang="scss">
+.img-fluid {
+  max-height: 626px;
 }
 </style>
