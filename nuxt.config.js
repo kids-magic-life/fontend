@@ -29,7 +29,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/font-awesome'],
 
   /*
    ** Nuxt.js modules
@@ -40,18 +40,6 @@ module.exports = {
     // Doc: https://github.com/vaso2/nuxt-fontawesome
     'nuxt-fontawesome'
   ],
-
-  /*
-   ** Font-Awesome Icon Sets
-   */
-  fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faBars']
-      }
-    ]
-  },
 
   /*
    ** Build configuration

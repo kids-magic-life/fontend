@@ -1,15 +1,20 @@
 <template>
-  <div>
+  <div
+    style=" position: relative;
+  min-height: 100vh;"
+  >
     <navigation></navigation>
     <nuxt />
+    <foot></foot>
   </div>
 </template>
 <script>
 import Navigation from '~/components/Navigation'
+import Foot from '~/components/Footer'
 
 export default {
   name: 'DefaultLayout',
-  components: { Navigation }
+  components: { Navigation, Foot }
 }
 </script>
 <style>
