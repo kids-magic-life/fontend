@@ -24,7 +24,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/main.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -40,6 +40,10 @@ module.exports = {
     // Doc: https://github.com/vaso2/nuxt-fontawesome
     'nuxt-fontawesome'
   ],
+
+  router: {
+    linkActiveClass: 'active'
+  },
 
   /*
    ** Build configuration
