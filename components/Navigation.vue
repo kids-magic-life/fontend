@@ -17,10 +17,10 @@
             <nuxt-link to="/">Home</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">About Us</nuxt-link>
+            <nuxt-link to="about-us">About Us</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/">Live Shows</nuxt-link>
+            <nuxt-link to="live-show">Live Shows</nuxt-link>
           </li>
           <li>
             <a href="#">Education</a>
