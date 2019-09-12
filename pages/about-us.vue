@@ -211,14 +211,17 @@ div.ex3 {
   border: 2px solid black;
   margin: 35px;
 }
+
 p.ex1 {
   padding-top: 45px;
   padding-right: 45px;
   padding-left: 45px;
 }
+
 p.inner {
   font-family: 'Bookman Old Style';
 }
+
 ul.ex1 {
   font-size: 25px;
   font-family: fantasy;
