@@ -1,0 +1,7 @@
+mutation addImage($title: String!, $description: String!, $file: Upload!) {
+  addImage(title: $title, description: $description, file: $file) {
+    id
+    description
+    title
+  }
+}

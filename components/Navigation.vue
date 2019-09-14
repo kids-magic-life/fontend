@@ -16,11 +16,11 @@
           <nav class="fix-navbar">
             <ul class="primary-navbar">
               <li><nuxt-link to="/">Home</nuxt-link></li>
-              <li><nuxt-link to="/">About Us</nuxt-link></li>
+              <li><nuxt-link to="/about-us">About Us</nuxt-link></li>
               <li><nuxt-link to="/">Live Shows</nuxt-link></li>
               <li><nuxt-link to="/">Education</nuxt-link></li>
               <li><nuxt-link to="/">Entertainers</nuxt-link></li>
-              <li><nuxt-link to="/">Blog</nuxt-link></li>
+              <li><nuxt-link to="/">Gallery</nuxt-link></li>
               <li><nuxt-link to="/">Contact Us</nuxt-link></li>
             </ul>
           </nav>

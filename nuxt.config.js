@@ -38,8 +38,20 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // Doc: https://github.com/vaso2/nuxt-fontawesome
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/apollo'
   ],
+
+  apollo: {
+    tokenName: 'access-token',
+    authenticationType: 'Bearer',
+    clientConfigs: {
+      // default: {
+      //   httpEndpoint: 'http://localhost:9000'
+      // }
+      default: '~/plugins/apollo.js'
+    }
+  },
 
   router: {
     linkActiveClass: 'active'

@@ -1,118 +1,178 @@
 <template>
-  <main>
-    <b-carousel>
-      <b-carousel-slide>
-        <b-img
-          slot="img"
-          fluid-grow
-          src="https://picsum.photos/1024/480/?image=52"
-          style="max-height: 100vh"
-        />
-        <div class="text-middle">
-          <div class="tbl-cell">
-            <div class="slide-caption container text-center">
-              <div class="slide-title">
-                <img src="/logo.png" alt="" />
-              </div>
-              <div class="slide-title2 pb-50">
-                <h2 class="section-title">
-                  <span class="light-font">Lorem ipsum </span>
-                  <strong>dolor </strong>
-                  <span class="light-font">sit amet, </span>
-                  <strong>consectetur </strong>
-                </h2>
-                <h4 class="sub-title">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </b-carousel-slide>
-    </b-carousel>
-    <section class="organic-farm sec-space-top light-bg">
-      <div class="container rel-div">
-        <div class="title-wrap">
+  <main style="padding-top: 140px">
+    <section class="breadcrumb-bg">
+      <div class="theme-container container ">
+        <div class="site-breadcumb white-clr">
           <h2 class="section-title">
-            <span class="light-font">We are </span>
-            <strong>
-              Kids Magic Life
-              <b-img src="assets/img/icons/logo-icon.png" alt="" />
-            </strong>
+            <span class="light-font">About </span>
+            <strong class="clr-txt">Kids Magic Life </strong>
           </h2>
-          <h4 class="sub-title"><span> ABOUT KIDS MAGIC LIFE </span></h4>
+          <ol class="breadcrumb breadcrumb-menubar">
+            <li><nuxt-link to="/"> Home </nuxt-link> About Us</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="organic-farm-2 sec-space-bottom">
+      <img
+        alt=""
+        src="assets/img/extra/sec-img-7.png"
+        class="left-bottom-img"
+      />
+      <b-img
+        alt=""
+        src="assets/img/extra/sec-img-8.png"
+        class="right-top-img"
+      />
+
+      <div class="pattern">
+        <b-img fluid-grow src="/images/white-pattern.png" />
+      </div>
+      <div class="section-icon">
+        <b-img width="128px" src="/images/logo.png" />
+      </div>
+
+      <b-container class="rel-div">
+        <b-row>
+          <b-col sm="6" class="text-right fsz-16 pt-15 xs-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              enim ad minim veniam, quis nostrud exerci tation.
+            </p>
+          </b-col>
+          <b-col sm="6" class="text-left xs-text">
+            <h2 class="section-title">
+              <span class="light-font">We are </span>
+              <strong>
+                Kids Magic Life
+                <img src="assets/img/icons/logo-icon.png" alt="" />
+              </strong>
+            </h2>
+            <h4 class="sub-title">ABOUT KIDS MAGIC LIFE</h4>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col sm="6" md="3" class="text-center">
+            <div class="feature-wrap">
+              <b-img
+                src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/feature-1.png"
+              />
+              <h3 class="title-1 ptb-15">
+                <span class="light-font"> Lorem ipsum </span>
+                <strong> ipsum dolor</strong>
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy.
+              </p>
+            </div>
+          </b-col>
+          <b-col sm="6" md="3" class="text-center">
+            <div class="feature-wrap">
+              <b-img
+                src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/feature-2.png"
+              />
+              <h3 class="title-1 ptb-15">
+                <span class="light-font"> Lorem ipsum</span>
+                <strong> dolor</strong>
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy.
+              </p>
+            </div>
+          </b-col>
+          <b-col sm="6" md="3" class="text-center">
+            <div class="feature-wrap">
+              <b-img
+                src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/feature-3.png"
+              />
+              <h3 class="title-1 ptb-15">
+                <span class="light-font">Lorem </span>
+                <strong> ipsum</strong>
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy.
+              </p>
+            </div>
+          </b-col>
+          <b-col sm="6" md="3" class="text-center">
+            <div class="feature-wrap">
+              <b-img
+                src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/feature-4.png"
+              />
+              <h3 class="title-1 ptb-15">
+                <span class="light-font">Lorem ipsum </span>
+                <strong>ipsum</strong>
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy.
+              </p>
+            </div>
+          </b-col>
+        </b-row>
+
+        <div class="rel-div feature-img">
+          <img src="assets/img/extra/feature.png" alt="" />
+        </div>
+      </b-container>
+    </section>
+
+    <section class="short-about sec-space light-bg">
+      <img alt="" src="assets/img/extra/sec-img-1.png" class="left-top-img" />
+      <img alt="" src="assets/img/extra/sec-img-3.png" class="center-bg-img" />
+      <img
+        alt=""
+        src="assets/img/extra/sec-img-4.png"
+        class="left-bottom-img"
+      />
+
+      <b-container class="rel-div">
+        <div class="title-wrap pt-15">
+          <h4 class="fsz-20">
+            <strong>Kids Magic Life</strong>
+            <span class="light-font"> since 2002 </span>
+          </h4>
+          <h2 class="fsz-50 over-txt-title">
+            <span class="light-font">
+              WE DO
+              <span class="over-txt light-bg">Lorem ipsum dolor sit amet</span>
+            </span>
+            <strong>IPSUM</strong>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat.
+            consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+            ullamcorper .
           </p>
         </div>
-        <div class="row">
-          <div class="col-md-3 col-sm-6 text-center">
-            <div class="feature-wrap">
-              <b-img src="/images/sun-circle/logo.png" width="120px" alt="" />
-              <h3 class="title-1 ptb-15">
-                <span class="light-font">Lorem ipsum </span>
-                <strong> dolor sit</strong>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <div class="feature-wrap">
-              <b-img src="/images/mind-mastery/logo.png" width="120px" alt="" />
-              <h3 class="title-1 ptb-15">
-                <span class="light-font">Lorem ipsum </span>
-                <strong> dolor sit</strong>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <div class="feature-wrap">
-              <b-img src="/images/sun-circle/logo.png" width="120px" alt="" />
-              <h3 class="title-1 ptb-15">
-                <span class="light-font">Lorem ipsum </span>
-                <strong> dolor sit</strong>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <div class="feature-wrap">
-              <b-img src="/images/mind-mastery/logo.png" width="120px" alt="" />
-              <h3 class="title-1 ptb-15">
-                <span class="light-font">Lorem ipsum </span>
-                <strong> dolor sit</strong>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="rel-div feature-img">
-          <b-img src="assets/img/extra/feature.png" alt="" />
+        <div class="about-wrap">
+          <img
+            class="logo-img"
+            alt=""
+            src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/sign-1.png"
+          />
+          <h4 class="">
+            <strong>Charise</strong> <span class="light-font"> Katz </span>
+          </h4>
+          <h5 class="clr-txt sub-title-sm">KIDS MAGIC LIFE OWNER</h5>
+          <img class="logo-img" alt="" src="assets/img/extra/about-1.png" />
         </div>
-      </div>
+      </b-container>
     </section>
 
-    <!--  INFO SECTION  -->
     <section class="organic-product sec-space">
-      <b-container class="container">
+      <b-container>
         <b-row class="sec-space-top">
           <b-col sm="12" lg="6">
             <b-row>
@@ -226,73 +286,10 @@
           </b-col>
         </b-row>
       </b-container>
-
-      <dropzone
-        id="foo"
-        ref="foo"
-        :options="options"
-        :destroy-dropzone="true"
-        @vdropzone-files-added="upload"
-      ></dropzone>
-
-      <input type="file" />
     </section>
-    <!--  END INFO SECTION  -->
   </main>
 </template>
-<script>
-import ADD_IMAGE from '@/graphql/ADD_IMAGE'
-import Dropzone from 'nuxt-dropzone'
-import 'nuxt-dropzone/dropzone.css'
 
-export default {
-  components: {
-    Dropzone
-  },
-  data() {
-    return {
-      // See https://rowanwins.github.io/vue-dropzone/docs/dist/index.html#/props
-      options: {
-        url: 'http://httpbin.org/anything',
-        autoProcessQueue: false
-      },
-      files: []
-    }
-  },
-  methods: {
-    upload(file) {
-      const reader = new FileReader()
-      reader.readAsDataURL(file[0])
+<script></script>
 
-      // eslint-disable-next-line no-console
-      console.log(file)
-
-      reader.onloadend = () => {
-        this.$apollo
-          .mutate({
-            mutation: ADD_IMAGE,
-            variables: {
-              title: 'Title',
-              description: 'Description',
-              file: file[0]
-            }
-          })
-          .then(result => {
-            // eslint-disable-next-line no-console
-            console.log(result)
-          })
-          .catch(error => {
-            // eslint-disable-next-line no-console
-            console.log(error)
-          })
-      }
-    }
-  }
-}
-</script>
-<style lang="scss">
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-40%);
-}
-</style>
+<style scoped></style>
