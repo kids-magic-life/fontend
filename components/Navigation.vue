@@ -4,9 +4,11 @@
       <b-row>
         <b-col sm="8" md="8" lg="4" no-gutters>
           <div class="main-logo">
-            <a href="index.html">
-              <b-img center src="/images/logo.png" alt="" width="80px" />
-            </a>
+            <nuxt-link to="/">
+              <a>
+                <b-img center src="/images/logo.png" alt="" width="80px" />
+              </a>
+            </nuxt-link>
           </div>
         </b-col>
         <b-col sm="2" lg="6" class="responsive-menu">
@@ -15,7 +17,7 @@
           </div>
           <nav class="fix-navbar">
             <ul class="primary-navbar">
-              <li><nuxt-link to="/">Home</nuxt-link></li>
+              <li><nuxt-link to="/" tag="a">Home</nuxt-link></li>
               <li><nuxt-link to="/about-us">About Us</nuxt-link></li>
               <li><nuxt-link to="/">Live Shows</nuxt-link></li>
               <li><nuxt-link to="/">Education</nuxt-link></li>
@@ -24,6 +26,14 @@
               <li><nuxt-link to="/">Contact Us</nuxt-link></li>
             </ul>
           </nav>
+        </b-col>
+        <b-col sm="2" md="4" lg="2" class="cart-megamenu">
+          <div class="responsive-toggle">
+            <b-img
+              src="http://event-theme.com/themes/html/naturix-html/assets/img/icons/menu.png"
+              @click="toggleSideMenu()"
+            />
+          </div>
         </b-col>
       </b-row>
     </b-container>
