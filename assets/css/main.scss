@@ -246,6 +246,7 @@ strong {
 
 .section-icon {
   text-align: center;
+  margin-top: -2%
 }
 
 .section-icon .icon i {
@@ -1123,6 +1124,7 @@ blockquote {
   text-align: center;
   position: relative;
   background-color: #fff;
+  border: 1px solid #eeeeee;
 }
 
 .owl-carousel .product-box {
@@ -1131,6 +1133,7 @@ blockquote {
 
 .product-box:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .light-bg .product-box {
@@ -1164,7 +1167,7 @@ blockquote {
 
 .product-media {
   background-color: #f7f6f2;
-  height: 330px;
+  //height: 330px;
   position: relative;
 }
 
@@ -1173,7 +1176,7 @@ blockquote {
   margin: auto;
   left: 0;
   right: 0;
-  position: absolute;
+  //position: absolute;
   z-index: 1;
 }
 
@@ -1197,7 +1200,7 @@ blockquote {
 
 .product-caption {
   text-align: center;
-  padding: 10px 0 30px;
+  broder: 1px solid #eeeeee
 }
 
 .prod-icons {

@@ -5,9 +5,9 @@
         <b-row>
           <b-col sm="12" md="6" class="footer-widget">
             <div class="main-logo">
-              <a href="index.html">
+              <nuxt-link to="/">
                 <b-img alt="" src="/images/logo.png" width="96px" />
-              </a>
+              </nuxt-link>
               <span class="medium-font">KIDS MAGIC LIFE</span>
             </div>
             <span class="divider-2"></span>
@@ -18,23 +18,17 @@
               </p>
               <ul>
                 <li>
-                  <font-awesome-icon
-                    icon="map-marked"
-                    size="xs"
-                  ></font-awesome-icon>
+                  <font-awesome-icon icon="map-marked" size="xs" />
                   <span>
                     South Road, Bentleigh, Melbourne, Australia
                   </span>
                 </li>
                 <li>
-                  <font-awesome-icon
-                    icon="envelope"
-                    size="xs"
-                  ></font-awesome-icon>
+                  <font-awesome-icon icon="envelope" size="xs" />
                   <span> kidsmagiclife@gmail.com</span>
                 </li>
                 <li>
-                  <font-awesome-icon icon="phone" size="xs"></font-awesome-icon>
+                  <font-awesome-icon icon="phone" size="xs" />
                   <span>0415 373 996</span>
                 </li>
               </ul>
@@ -47,40 +41,34 @@
             <span class="divider-2"></span>
             <ul class="list">
               <li>
-                <a href="#">
-                  <font-awesome-icon
-                    icon="arrow-circle-right"
-                    size="xs"
-                  ></font-awesome-icon>
-                  <span> About Us </span>
-                </a>
+                <nuxt-link to="contact-us">
+                  <font-awesome-icon icon="arrow-circle-right" size="xs" />
+                  <span> Contact Us </span>
+                </nuxt-link>
               </li>
               <li>
-                <a href="#">
-                  <font-awesome-icon
-                    icon="arrow-circle-right"
-                    size="xs"
-                  ></font-awesome-icon>
+                <nuxt-link to="about-us">
+                  <font-awesome-icon icon="arrow-circle-right" size="xs" />
                   <span> About Us </span>
-                </a>
+                </nuxt-link>
               </li>
               <li>
-                <a href="#">
-                  <font-awesome-icon
-                    icon="arrow-circle-right"
-                    size="xs"
-                  ></font-awesome-icon>
-                  <span> About Us </span>
-                </a>
+                <nuxt-link to="/">
+                  <font-awesome-icon icon="arrow-circle-right" size="xs" />
+                  <span> Products </span>
+                </nuxt-link>
               </li>
               <li>
-                <a href="#">
-                  <font-awesome-icon
-                    icon="arrow-circle-right"
-                    size="xs"
-                  ></font-awesome-icon>
-                  <span> About Us </span>
-                </a>
+                <nuxt-link to="live-shows">
+                  <font-awesome-icon icon="arrow-circle-right" size="xs" />
+                  <span> Live Shows </span>
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="gallery">
+                  <font-awesome-icon icon="arrow-circle-right" size="xs" />
+                  <span> Gallery </span>
+                </nuxt-link>
               </li>
             </ul>
           </b-col>
@@ -95,8 +83,7 @@
                   <font-awesome-icon
                     :icon="['fab', 'facebook-square']"
                     style="color: #3b5998"
-                    size="md"
-                  ></font-awesome-icon>
+                  />
                   <span> Facebook </span>
                 </a>
               </li>
@@ -105,8 +92,7 @@
                   <font-awesome-icon
                     :icon="['fab', 'instagram']"
                     style="color: #8a3ab9"
-                    size="md"
-                  ></font-awesome-icon>
+                  />
                   <span> Instagram </span>
                 </a>
               </li>
@@ -115,8 +101,7 @@
                   <font-awesome-icon
                     :icon="['fab', 'youtube']"
                     style="color: #c4302b"
-                    size="md"
-                  ></font-awesome-icon>
+                  />
                   <span> YouTube </span>
                 </a>
               </li>
@@ -130,7 +115,7 @@
         <b-img fluid-grow src="/images/white-pattern.png" />
       </div>
       <div id="to-top" class="to-top" @click="toTop()">
-        <font-awesome-icon icon="chevron-up" size="md"></font-awesome-icon>
+        <font-awesome-icon icon="chevron-up" />
       </div>
       <b-container class="ptb-15">
         <b-row>
@@ -139,14 +124,14 @@
               <!-- Rights here -->
             </p>
           </b-col>
-          <b-col sm="7" md="6">
-            <!--            <ul class="primary-navbar footer-menu">-->
-            <!--              <li><a href="#">contact us </a></li>-->
-            <!--              <li><a href="#">term of use </a></li>-->
-            <!--              <li><a href="#">site map </a></li>-->
-            <!--              <li><a href="#">privacy policy</a></li>-->
-            <!--            </ul>-->
-          </b-col>
+          <!--          <b-col sm="7" md="6">-->
+          <!--            &lt;!&ndash;            <ul class="primary-navbar footer-menu">&ndash;&gt;-->
+          <!--            &lt;!&ndash;              <li><a href="#">contact us </a></li>&ndash;&gt;-->
+          <!--            &lt;!&ndash;              <li><a href="#">term of use </a></li>&ndash;&gt;-->
+          <!--            &lt;!&ndash;              <li><a href="#">site map </a></li>&ndash;&gt;-->
+          <!--            &lt;!&ndash;              <li><a href="#">privacy policy</a></li>&ndash;&gt;-->
+          <!--            &lt;!&ndash;            </ul>&ndash;&gt;-->
+          <!--          </b-col>-->
         </b-row>
       </b-container>
     </section>

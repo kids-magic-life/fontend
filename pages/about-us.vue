@@ -15,17 +15,6 @@
     </section>
 
     <section class="organic-farm-2 sec-space-bottom">
-      <img
-        alt=""
-        src="assets/img/extra/sec-img-7.png"
-        class="left-bottom-img"
-      />
-      <b-img
-        alt=""
-        src="assets/img/extra/sec-img-8.png"
-        class="right-top-img"
-      />
-
       <div class="pattern">
         <b-img fluid-grow src="/images/white-pattern.png" />
       </div>
@@ -33,7 +22,7 @@
         <b-img width="128px" src="/images/logo.png" />
       </div>
 
-      <b-container class="rel-div">
+      <b-container class="rel-div" style="margin-top: 24px">
         <b-row>
           <b-col sm="6" class="text-right fsz-16 pt-15 xs-text">
             <p>
@@ -47,7 +36,6 @@
               <span class="light-font">We are </span>
               <strong>
                 Kids Magic Life
-                <img src="assets/img/icons/logo-icon.png" alt="" />
               </strong>
             </h2>
             <h4 class="sub-title">ABOUT KIDS MAGIC LIFE</h4>
@@ -115,22 +103,10 @@
             </div>
           </b-col>
         </b-row>
-
-        <div class="rel-div feature-img">
-          <img src="assets/img/extra/feature.png" alt="" />
-        </div>
       </b-container>
     </section>
 
     <section class="short-about sec-space light-bg">
-      <img alt="" src="assets/img/extra/sec-img-1.png" class="left-top-img" />
-      <img alt="" src="assets/img/extra/sec-img-3.png" class="center-bg-img" />
-      <img
-        alt=""
-        src="assets/img/extra/sec-img-4.png"
-        class="left-bottom-img"
-      />
-
       <b-container class="rel-div">
         <div class="title-wrap pt-15">
           <h4 class="fsz-20">
@@ -166,7 +142,6 @@
             <strong>Charise</strong> <span class="light-font"> Katz </span>
           </h4>
           <h5 class="clr-txt sub-title-sm">KIDS MAGIC LIFE OWNER</h5>
-          <img class="logo-img" alt="" src="assets/img/extra/about-1.png" />
         </div>
       </b-container>
     </section>

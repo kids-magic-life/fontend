@@ -3,9 +3,9 @@
     style=" position: relative;
   min-height: 100vh;"
   >
-    <navigation></navigation>
+    <navigation />
     <nuxt />
-    <foot></foot>
+    <foot />
   </div>
 </template>
 <script>
