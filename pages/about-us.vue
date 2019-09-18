@@ -12,9 +12,9 @@
           <b-media no-body>
             <b-media-aside vertical-align="center">
               <b-img
-                src="https://picsum.photos/250/250/?image=54"
+                src="https://scontent.fmel3-1.fna.fbcdn.net/v/t1.0-9/56691301_2316778871712646_537678219822759936_o.jpg?_nc_cat=102&_nc_oc=AQlz_1JlwruhtEho2Lg2OpsZVWR5hqpH9lOrs6j6EICqvxe-nhugOxrnLIkXYti_Mk4&_nc_ht=scontent.fmel3-1.fna&oh=369602669aaaef88e9b90bbeded5f4f4&oe=5E068F12"
                 blank-color="#ccc"
-                width="128"
+                width="250"
                 height="256"
                 alt="placeholder"
               ></b-img>
@@ -46,9 +46,9 @@
             <b-media right-align vertical-align="center">
               <b-img
                 slot="aside"
-                src="https://picsum.photos/250/250/?image=54"
+                src="https://scontent.fmel3-1.fna.fbcdn.net/v/t1.0-9/56883455_2316778641712669_4810321933675528192_o.jpg?_nc_cat=105&_nc_oc=AQm2mZTI-Z_sd-j4HOZ4PPArwcEOXD2wcbjh2GlxZSYEdM1e6KzVhtleP2qSf6KCs7U&_nc_ht=scontent.fmel3-1.fna&oh=c6d791ca7c749fd2c92f04722ae2c8f4&oe=5DF5B85B"
                 blank-color="#ccc"
-                width="128"
+                width="280"
                 height="256"
                 alt="placeholder"
               ></b-img>
@@ -76,7 +76,17 @@
 
       <div class="ex1">
         <b-card>
-          <b-media>
+          <b-media no-body>
+            <b-media-aside vertical-align="center">
+              <b-img
+                src="https://scontent.fmel3-1.fna.fbcdn.net/v/t1.0-9/56942440_2316778378379362_8361895055765536768_o.jpg?_nc_cat=111&_nc_oc=AQnMo4WFWRL1yWcQ1HyrqH6dRIkTLgdQKHrlAytZ3eUO5nlD6l0_PbYXJA6l2Bgiy4k&_nc_ht=scontent.fmel3-1.fna&oh=c3521c247a23068afc3e32bed6e7dca9&oe=5E090F16"
+                blank-color="#ccc"
+                width="280"
+                height="256"
+                alt="placeholder"
+              ></b-img>
+            </b-media-aside>
+
             <b-media-body>
               <p class="ex1">
                 These stories are written for children to help them expand their
@@ -116,48 +126,6 @@
         </ul>
       </div>
     </body>
-
-    <section>
-      <b-container fluid>
-        <b-row>
-          <b-col>
-            <div class="division">
-              <nuxt-link to="/">
-                <b-img
-                  fluid
-                  center
-                  src="/images/sun-circle/sun-circle-logo.png"
-                  alt="sun-circle-logo.png"
-                  height="512px"
-                />
-              </nuxt-link>
-              <h2>Sun Circle</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eu consectetur leo. Pellentesque id hendrerit velit.
-              </p>
-            </div>
-          </b-col>
-          <b-col>
-            <div class="division">
-              <nuxt-link to="/">
-                <b-img
-                  fluid
-                  center
-                  src="/images/mind-mastery/mind-mastery-logo.png"
-                  alt="mind-mastery-logo.png"
-                />
-              </nuxt-link>
-              <h2>Mind Mastery</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eu consectetur leo. Pellentesque id hendrerit velit.
-              </p>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
   </section>
 </template>
 

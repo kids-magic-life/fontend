@@ -32,7 +32,7 @@
                 <nuxt-link to="/">Parent Workshops</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/">Children Program</nuxt-link>
+                <nuxt-link to="children-program">Children Program</nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/">Teachers / Schools</nuxt-link>
