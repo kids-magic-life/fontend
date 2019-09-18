@@ -4,8 +4,8 @@
       <div class="theme-container container ">
         <div class="site-breadcumb white-clr">
           <h2 class="section-title">
-            <span class="light-font">About </span>
-            <strong class="clr-txt">Kids Magic Life </strong>
+            <span class="light-font">Kids Magic Life</span>
+            <strong class="clr-txt">About Us </strong>
           </h2>
           <ol class="breadcrumb breadcrumb-menubar">
             <li><nuxt-link to="/"> Home </nuxt-link> About Us</li>

@@ -4,11 +4,11 @@
       <div class="theme-container container ">
         <div class="site-breadcumb white-clr">
           <h2 class="section-title">
-            <strong class="clr-txt">naturix </strong>
-            <span class="light-font">Shop </span>
+            <span class="light-font">Kids Magic Life</span>
+            <strong class="clr-txt">Contact Us </strong>
           </h2>
           <ol class="breadcrumb breadcrumb-menubar">
-            <li><a href="#"> Home </a> Contact</li>
+            <li><a href="#"> Home </a> Contact Us</li>
           </ol>
         </div>
       </div>
