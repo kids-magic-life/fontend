@@ -79,12 +79,27 @@
             <span class="divider-2"></span>
             <ul class="list">
               <li>
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/Kids-Magic-Life-Productions-308708932519660/"
+                  target="_blank"
+                >
                   <font-awesome-icon
                     :icon="['fab', 'facebook-square']"
                     style="color: #3b5998"
                   />
                   <span> Facebook </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCdRDCkRmsjs0xDGsBiMjbdw"
+                  target="_blank"
+                >
+                  <font-awesome-icon
+                    :icon="['fab', 'youtube']"
+                    style="color: #c4302b"
+                  />
+                  <span> YouTube </span>
                 </a>
               </li>
               <li>
@@ -94,15 +109,6 @@
                     style="color: #8a3ab9"
                   />
                   <span> Instagram </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <font-awesome-icon
-                    :icon="['fab', 'youtube']"
-                    style="color: #c4302b"
-                  />
-                  <span> YouTube </span>
                 </a>
               </li>
             </ul>
