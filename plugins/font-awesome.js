@@ -4,10 +4,27 @@ import {
   faBars,
   faMapMarked,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faArrowCircleRight,
+  faChevronUp
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faFacebookSquare,
+  faInstagram,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faBars, faMapMarked, faPhone, faEnvelope)
+library.add(
+  faBars,
+  faMapMarked,
+  faPhone,
+  faEnvelope,
+  faArrowCircleRight,
+  faChevronUp,
+  faFacebookSquare,
+  faInstagram,
+  faYoutube
+)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
