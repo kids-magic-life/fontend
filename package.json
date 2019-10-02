@@ -26,13 +26,8 @@
     "graphql-tag": "^2.10.1",
     "koa": "^2.6.2",
     "nuxt": "^2.4.0",
-<<<<<<< HEAD
-    "nuxt-fontawesome": "^0.4.0",
-    "vue": "^2.6.10"
-=======
     "nuxt-dropzone": "^1.0.4",
     "nuxt-fontawesome": "^0.4.0"
->>>>>>> f80612eb1a8a113f7869e37c84bdeef69d01b32e
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
