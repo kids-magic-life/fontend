@@ -29,7 +29,11 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/font-awesome'],
+  plugins: [
+    '~/plugins/font-awesome',
+    '~/plugins/vue-overlay',
+    { src: '~/plugins/local-storage.js', ssr: false }
+  ],
 
   /*
    ** Nuxt.js modules
@@ -54,7 +58,8 @@ module.exports = {
   },
 
   router: {
-    linkActiveClass: 'active'
+    linkActiveClass: 'active',
+    middleware: 'check-auth'
   },
 
   /*

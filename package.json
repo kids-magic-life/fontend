@@ -27,7 +27,10 @@
     "koa": "^2.6.2",
     "nuxt": "^2.4.0",
     "nuxt-dropzone": "^1.0.4",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-loading-overlay": "^3.2.0",
+    "vuex-persist-plugin": "^1.0.2",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
