@@ -18,7 +18,7 @@
               <li><nuxt-link to="/" tag="a">Home</nuxt-link></li>
               <li><nuxt-link to="/about-us">About Us</nuxt-link></li>
               <li><nuxt-link to="/live-shows">Live Shows</nuxt-link></li>
-              <li><nuxt-link to="/shit">Education</nuxt-link></li>
+              <li><nuxt-link to="/education">Education</nuxt-link></li>
               <li><nuxt-link to="/">Entertainers</nuxt-link></li>
               <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
               <li><nuxt-link to="/contact-us">Contact Us</nuxt-link></li>
