@@ -7,7 +7,7 @@
     <!--      <img :src="pageInfor.cover.source" class="cover" />-->
     <!--    </div>-->
 
-    <!--  <h1>So luong bai viet: {{ pagePosts.length }}</h1>  -->
+    <!--  <h1>Number posts: {{ pagePosts.length }}</h1>  -->
 
     <div v-if="pagePosts.length !== 0">
       <iframe
