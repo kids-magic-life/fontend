@@ -61,7 +61,7 @@
               <li>
                 <nuxt-link to="live-shows">
                   <font-awesome-icon icon="arrow-circle-right" size="xs" />
-                  <span> Live Shows </span>
+                  <span> Shows </span>
                 </nuxt-link>
               </li>
               <li>
