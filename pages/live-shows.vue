@@ -15,12 +15,15 @@
     </section>
     <b-container>
       <b-row>
-        <b-col>
+        <b-col v-for="i in [1, 2]" :key="i">
           <div class="item">
             <div class="testi-wrap">
               <div class="testi-img">
                 <a href="#">
-                  <img src="assets/img/extra/testi-1.jpg" alt="" />
+                  <img
+                    src="http://event-theme.com/themes/html/naturix-html/assets/img/extra/testi-1.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="testi-caption">
@@ -30,34 +33,8 @@
                     elitsed the diam nonummy nibh euismod tincidunt.”</i
                   >
                 </p>
-                <a href="#">
-                  <i class="fa fa-user clr-txt"></i>
-                  <strong> LUIS GARCHIA </strong>
-                </a>
-              </div>
-            </div>
-          </div>
-        </b-col>
-
-        <b-col>
-          <div class="item">
-            <div class="testi-wrap">
-              <div class="testi-img">
-                <a href="#">
-                  <img src="assets/img/extra/testi-1.jpg" alt="" />
-                </a>
-              </div>
-              <div class="testi-caption">
-                <p>
-                  <i
-                    >“Lorem ipsum dolor sit amet, consectetuer adipiscing
-                    elitsed the diam nonummy nibh euismod tincidunt.”</i
-                  >
-                </p>
-                <a href="#">
-                  <i class="fa fa-user clr-txt"></i>
-                  <strong> LUIS GARCHIA </strong>
-                </a>
+                <i class="fa fa-user clr-txt"></i>
+                <strong> LUIS GARCHIA </strong>
               </div>
             </div>
           </div>
