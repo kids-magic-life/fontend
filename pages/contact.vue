@@ -1,75 +1,93 @@
 <template>
-  <div id="contact" :class="{ loading: loading }">
-    <div class="column">
-      <div class="column1">
-        <img src="/font/spotlight.jpg" class="bg" />
-        <p>
-          <span class="fa fa-map-marker">&emsp;&nbsp;&nbsp;Address</span><br />
-          <a
-            href="https://www.google.com/maps/place/Umbrella+Lounge+Bar/@-37.884751,145.0008673,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad668fe528eaf67:0xf6318e9aeff5f370!8m2!3d-37.884751!4d145.003056"
-            style="color: #8c8c8c;"
-            >Umbrella Lounge Bar, 338-340 Glen Huntly Road<br />&emsp;&emsp;&nbsp;Elsternwick,
-            VIC 3185, Australia</a
-          ><br />
-          <span class="fa fa-comments-o">&emsp;Live Chat Support</span><br />
-          <a
-            href="https://m.me/308708932519660?fbclid=IwAR38wFuMeuPi6LmCTMciRLs32dvioFgxfNYkTVtSK5QdjeTbCejFFeuE1S4"
-            >Click Here To Chat</a
-          ><br />
-          <span class="fa fa-volume-control-phone">&emsp;&nbsp;Lets Talks</span
-          ><br />
-          <a href="">+61 415 373 996</a><br />
-          <span class="fa fa-envelope-o">&emsp;&nbsp;General Support</span
-          ><br />
-          <a href="mailto:Charise@gmail.com">kidsmagiclife@gmail.com</a><br />
-        </p>
-      </div>
-    </div>
-    <div class="column">
-      <form action="" style="max-height: 100%; text-align: center;">
-        <h2 style="max-height: 65px; padding-top: 10px;">Send Us A Message</h2>
-        <div style="text-align: left; max-height: 70%; font-weight: bold">
-          <label for="name">&nbsp; Tell Us Your Name</label>
-          <input
-            id="name"
-            v-model="name"
-            type="text"
-            name="name"
-            pattern="^[a-zA-Z][a-zA-Z-_\s]+"
-            placeholder="Your name..."
-          />
-          <label for="email">&nbsp; Enter Your Email</label>
-          <input
-            id="email"
-            v-model="email"
-            name="email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            placeholder="Your email.."
-            type="text"
-          />
-          <label>&nbsp; Enter Message Subject</label>
-          <input
-            id="title"
-            v-model="title"
-            type="text"
-            name="title"
-            pattern="^[a-zA-Z]+[\w\W\d\s\.\?-_]*"
-            placeholder="Your message is about .."
-          />
-          <label>&nbsp; Message</label>
-          <textarea
-            id="subject"
-            v-model="message"
-            name="subject"
-            pattern="^[a-zA-Z]+[\w\W\d\s\.\?-_]*"
-            placeholder="Write something.."
-            style="min-height:170px; margin-top: 0"
-          ></textarea>
+  <div>
+    <section class="breadcrumb-bg">
+      <div class="theme-container container ">
+        <div class="site-breadcumb white-clr">
+          <h2 class="section-title">
+            <span class="light-font">Kids Magic Life</span>
+            <strong class="clr-txt">Contact Us </strong>
+          </h2>
         </div>
-        <input type="submit" value="Submit" @click.prevent="handleSubmit" />
-      </form>
+      </div>
+    </section>
+    <div id="contact" :class="{ loading: loading }">
+      <div class="column">
+        <div class="column1">
+          <img src="/font/spotlight.jpg" class="bg" />
+          <p>
+            <span class="fa fa-map-marker">&emsp;&nbsp;&nbsp;Address</span
+            ><br />
+            <a
+              href="https://www.google.com/maps/place/Umbrella+Lounge+Bar/@-37.884751,145.0008673,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad668fe528eaf67:0xf6318e9aeff5f370!8m2!3d-37.884751!4d145.003056"
+              class="a1"
+              >Umbrella Lounge Bar, 338-340 Glen Huntly Road<br />&emsp;&emsp;&nbsp;Elsternwick,
+              VIC 3185, Australia</a
+            ><br />
+            <span class="fa fa-comments-o">&emsp;Live Chat Support</span><br />
+            <a
+              href="https://m.me/308708932519660?fbclid=IwAR38wFuMeuPi6LmCTMciRLs32dvioFgxfNYkTVtSK5QdjeTbCejFFeuE1S4"
+              >Click Here To Chat</a
+            ><br />
+            <span class="fa fa-volume-control-phone"
+              >&emsp;&nbsp;Lets Talks</span
+            ><br />
+            <a href="">+61 415 373 996</a><br />
+            <span class="fa fa-envelope-o">&emsp;&nbsp;General Support</span
+            ><br />
+            <a href="mailto:Charise@gmail.com" class="a2"
+              >kidsmagiclife@gmail.com</a
+            ><br />
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <form action="" style="max-height: 100%; text-align: center;">
+          <h2 style="max-height: 65px; padding-top: 10px;">
+            Send Us A Message
+          </h2>
+          <div style="text-align: left; max-height: 70%; font-weight: bold">
+            <label for="name">&nbsp; Tell Us Your Name</label>
+            <input
+              id="name"
+              v-model="name"
+              type="text"
+              name="name"
+              pattern="^[a-zA-Z][a-zA-Z-_\s]+"
+              placeholder="Your name..."
+            />
+            <label for="email">&nbsp; Enter Your Email</label>
+            <input
+              id="email"
+              v-model="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              placeholder="Your email.."
+              type="text"
+            />
+            <label>&nbsp; Enter Message Subject</label>
+            <input
+              id="title"
+              v-model="title"
+              type="text"
+              name="title"
+              pattern="^[a-zA-Z]+[\w\W\d\s\.\?-_]*"
+              placeholder="Your message is about .."
+            />
+            <label>&nbsp; Message</label>
+            <textarea
+              id="subject"
+              v-model="message"
+              name="subject"
+              pattern="^[a-zA-Z]+[\w\W\d\s\.\?-_]*"
+              placeholder="Write something.."
+              style="min-height:170px; margin-top: 0"
+            ></textarea>
+          </div>
+          <input type="submit" value="Submit" @click.prevent="handleSubmit" />
+        </form>
+      </div>
+      <div class="fix-clear"></div>
     </div>
-    <div class="fix-clear"></div>
   </div>
 </template>
 
@@ -121,7 +139,6 @@ body {
 }
 #contact {
   display: flex;
-  padding-top: 140px;
 }
 #contact::after {
   content: '';
@@ -187,13 +204,22 @@ p {
   font-size: 18px;
   position: relative;
 }
-
+.a1 {
+  color: #ffc107;
+}
+.a2 {
+  color: #20c997;
+}
 a {
   font-family: Arial, Helvetica;
   font-size: 15px;
   padding-left: 35px;
   text-decoration: none;
-  color: #008000;
+  color: #f2aef7;
+}
+a:hover {
+  color: #ffa4a4;
+  font-size: 18px;
 }
 span {
   margin-top: 27px;
@@ -231,7 +257,8 @@ span {
 @media screen and (max-width: 600px) {
   .column,
   input[type='submit'] {
-    width: 100%;
+    float: none;
+    min-width: 100%;
     margin-top: 0;
     background: white;
     padding-right: 0;
