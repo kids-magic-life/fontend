@@ -23,7 +23,8 @@
               <li><nuxt-link to="/">Education</nuxt-link></li>
               <li><nuxt-link to="/">Entertainers</nuxt-link></li>
               <li><nuxt-link to="/">Gallery</nuxt-link></li>
-              <li><nuxt-link to="/">Contact Us</nuxt-link></li>
+              <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+              <li><nuxt-link to="/contact">Contact Us</nuxt-link></li>
             </ul>
           </nav>
         </b-col>
