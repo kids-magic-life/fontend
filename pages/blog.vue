@@ -1,34 +1,53 @@
 <template>
-  <div class="container" style="padding: 200px 0;">
-    <!--     <button @click="getPageInfor">Get page infor</button> -->
+  <div>
+    <section class="breadcrumb-bg">
+      <div class="theme-container container ">
+        <div class="site-breadcumb white-clr">
+          <h2 class="section-title">
+            <span class="light-font">Kids Magic Life</span>
+            <strong class="clr-txt">Facebook Blog </strong>
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <!--     <button @click="getPageInfor">Get page infor</button> -->
 
-    <!--    <div v-if="pageInfor != null">-->
-    <!--      <img :src="pageInfor.picture.data.url" class="picture" /> <br />-->
-    <!--      <img :src="pageInfor.cover.source" class="cover" />-->
-    <!--    </div>-->
+      <!--    <div v-if="pageInfor != null">-->
+      <!--      <img :src="pageInfor.picture.data.url" class="picture" /> <br />-->
+      <!--      <img :src="pageInfor.cover.source" class="cover" />-->
+      <!--    </div>-->
+      <!--  <h1>No posts: {{ pagePosts.length }}</h1>  -->
+      <!---- Load POSTS-------------------------------------------->
+      <div v-if="pagePosts.length !== 0">
+        <div
+          v-for="item in pagePosts"
+          :key="item.id"
+          class="fb-post"
+          :src="renderLink(item.id)"
+          data-width="100%"
+        ></div>
 
-    <!--  <h1>Number posts: {{ pagePosts.length }}</h1>  -->
-
-    <div v-if="pagePosts.length !== 0">
-      <iframe
-        v-for="item in pagePosts"
-        :key="item.id"
-        :src="renderLink(item.id)"
-        width="50%"
-        style="border:none;"
-        scrolling="no"
-        frameborder="0"
-        allowTransparency="true"
-        allow="encrypted-media"
-      ></iframe>
-      <hr />
+        <iframe
+          v-for="item in pagePosts"
+          :key="item.id"
+          :src="renderLink(item.id)"
+          width="48%"
+          style="border:1px solid #eeeeee; margin: 10px "
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+        <hr style="margin: 20px; width: 100%" />
+      </div>
+      <!--    <ul>-->
+      <!--      <li v-for="item in pagePosts" :key="item.id">-->
+      <!--        <p>Id: {{ item.id }} - Created Time: {{ item.created_time }}</p>-->
+      <!--        <p>Content: {{ item.message }}</p>-->
+      <!--      </li>-->
+      <!--    </ul>-->
     </div>
-    <!--    <ul>-->
-    <!--      <li v-for="item in pagePosts" :key="item.id">-->
-    <!--        <p>Id: {{ item.id }} - Created Time: {{ item.created_time }}</p>-->
-    <!--        <p>Content: {{ item.message }}</p>-->
-    <!--      </li>-->
-    <!--    </ul>-->
   </div>
 </template>
 
@@ -95,3 +114,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+input[type='submit'] {
+  background-color: #009900;
+  color: white;
+  padding: 6px 21px;
+  border: none;
+  cursor: pointer;
+  max-height: 35px;
+  text-align: center;
+}
+
+input[type='submit']:hover {
+  background-color: #045d04fa;
+}
+</style>
