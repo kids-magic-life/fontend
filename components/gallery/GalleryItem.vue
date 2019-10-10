@@ -5,16 +5,16 @@
         <b-img-lazy
           class="prod-img"
           alt=""
-          src="https://scontent.fmel3-1.fna.fbcdn.net/v/t31.0-8/18156648_1428685763855299_8733790701788824097_o.jpg?_nc_cat=111&_nc_oc=AQkYgIiBsEQknt1ov8nfbT5-BsBXeCq8cuR052xGAOf7AHbAuQPvbsjM9DahiMOmr-0&_nc_ht=scontent.fmel3-1.fna&oh=3a9f8647b9e37da6de8176efd01dac2b&oe=5E361D0F"
+          :src="'http://localhost:9000/' + image.location"
         />
       </div>
 
       <div class="product-caption">
         <h3 class="product-title">
           <a href="#" @click="show = true">
-            <span class="light-font"> Kids Magic Life </span>
+            <span class="light-font"> {{ image.title }} </span>
             <i class="mini-font">
-              29th January 2019
+              {{ moment(image.CreatedAt).format('D-MM-YYYY') }}
             </i>
           </a>
         </h3>
@@ -35,7 +35,8 @@ export default {
   },
   data() {
     return {
-      show: false
+      show: false,
+      moment: this.$moment
     }
   }
 }

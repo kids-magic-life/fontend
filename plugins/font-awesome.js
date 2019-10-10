@@ -6,7 +6,10 @@ import {
   faPhone,
   faEnvelope,
   faArrowCircleRight,
-  faChevronUp
+  faChevronUp,
+  faArrowLeft,
+  faArrowRight,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebookSquare,
@@ -24,7 +27,10 @@ library.add(
   faChevronUp,
   faFacebookSquare,
   faInstagram,
-  faYoutube
+  faYoutube,
+  faArrowLeft,
+  faArrowRight,
+  faTimes
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

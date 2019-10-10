@@ -3,5 +3,6 @@ mutation addImage($title: String!, $description: String!, $file: Upload!) {
     id
     description
     title
+    location
   }
 }

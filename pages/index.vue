@@ -226,69 +226,12 @@
           </b-col>
         </b-row>
       </b-container>
-
-      <dropzone
-        id="foo"
-        ref="foo"
-        :options="options"
-        :destroy-dropzone="true"
-        @vdropzone-files-added="upload"
-      ></dropzone>
-
-      <input type="file" />
     </section>
     <!--  END INFO SECTION  -->
   </main>
 </template>
 <script>
-import ADD_IMAGE from '@/graphql/ADD_IMAGE'
-import Dropzone from 'nuxt-dropzone'
-import 'nuxt-dropzone/dropzone.css'
-
-export default {
-  components: {
-    Dropzone
-  },
-  data() {
-    return {
-      // See https://rowanwins.github.io/vue-dropzone/docs/dist/index.html#/props
-      options: {
-        url: 'http://httpbin.org/anything',
-        autoProcessQueue: false
-      },
-      files: []
-    }
-  },
-  methods: {
-    upload(file) {
-      const reader = new FileReader()
-      reader.readAsDataURL(file[0])
-
-      // eslint-disable-next-line no-console
-      console.log(file)
-
-      reader.onloadend = () => {
-        this.$apollo
-          .mutate({
-            mutation: ADD_IMAGE,
-            variables: {
-              title: 'Title',
-              description: 'Description',
-              file: file[0]
-            }
-          })
-          .then(result => {
-            // eslint-disable-next-line no-console
-            console.log(result)
-          })
-          .catch(error => {
-            // eslint-disable-next-line no-console
-            console.log(error)
-          })
-      }
-    }
-  }
-}
+export default {}
 </script>
 <style lang="scss">
 .carousel-caption {

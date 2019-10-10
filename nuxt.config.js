@@ -43,7 +43,8 @@ module.exports = {
     'bootstrap-vue/nuxt',
     // Doc: https://github.com/vaso2/nuxt-fontawesome
     'nuxt-fontawesome',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/moment'
   ],
 
   apollo: {
