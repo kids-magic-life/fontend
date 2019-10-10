@@ -42,7 +42,7 @@
       </div>
       <div class="column">
         <form action="" style="max-height: 100%; text-align: center;">
-          <h2 style="max-height: 65px; padding-top: 10px;">
+          <h2 style="max-height: 65px; padding-top: 10px; color: green;">
             Send Us A Message
           </h2>
           <div style="text-align: left; max-height: 70%; font-weight: bold">
