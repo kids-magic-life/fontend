@@ -5,8 +5,10 @@
         <img src="/font/spotlight.jpg" class="bg" />
         <p>
           <span class="fa fa-map-marker">&emsp;&nbsp;&nbsp;Address</span><br />
-          <a href="" style="color: #8c8c8c;"
-            >Umbrella Lounge Bar, s338-340 Glen Huntly Road<br />&emsp;&emsp;&nbsp;Elsternwick,
+          <a
+            href="https://www.google.com/maps/place/Umbrella+Lounge+Bar/@-37.884751,145.0008673,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad668fe528eaf67:0xf6318e9aeff5f370!8m2!3d-37.884751!4d145.003056"
+            style="color: #8c8c8c;"
+            >Umbrella Lounge Bar, 338-340 Glen Huntly Road<br />&emsp;&emsp;&nbsp;Elsternwick,
             VIC 3185, Australia</a
           ><br />
           <span class="fa fa-comments-o">&emsp;Live Chat Support</span><br />
@@ -39,11 +41,11 @@
           <label for="email">&nbsp; Enter Your Email</label>
           <input
             id="email"
+            v-model="email"
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             placeholder="Your email.."
             type="text"
-            v-model="email"
           />
           <label>&nbsp; Enter Message Subject</label>
           <input
