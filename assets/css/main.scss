@@ -1166,17 +1166,19 @@ blockquote {
 }
 
 .product-media {
+  min-height: 219px;
   background-color: #f7f6f2;
-  //height: 330px;
   position: relative;
 }
 
 .product-media > .prod-img {
+  max-width: 168px;
+  width: 168px;
   bottom: 0;
   margin: auto;
   left: 0;
   right: 0;
-  //position: absolute;
+  position: absolute;
   z-index: 1;
 }
 

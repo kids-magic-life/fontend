@@ -14,7 +14,8 @@ import {
 import {
   faFacebookSquare,
   faInstagram,
-  faYoutube
+  faYoutube,
+  faAmazon
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -27,6 +28,7 @@ library.add(
   faChevronUp,
   faFacebookSquare,
   faInstagram,
+  faAmazon,
   faYoutube,
   faArrowLeft,
   faArrowRight,

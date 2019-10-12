@@ -53,7 +53,7 @@
                 </nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/">
+                <nuxt-link to="/products">
                   <font-awesome-icon icon="arrow-circle-right" size="xs" />
                   <span> Products </span>
                 </nuxt-link>
@@ -103,14 +103,26 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a
+                  href="https://www.amazon.com/s?i=digital-text&rh=p_27%3ACharise+Katz&s=relevancerank&text=Charise+Katz&ref=dp_byline_sr_ebooks_1"
+                  target="_blank"
+                >
                   <font-awesome-icon
-                    :icon="['fab', 'instagram']"
-                    style="color: #8a3ab9"
+                    :icon="['fab', 'amazon']"
+                    style="color: #232f3e"
                   />
-                  <span> Instagram </span>
+                  <span> Amazon </span>
                 </a>
               </li>
+              <!--              <li>-->
+              <!--                <a href="#">-->
+              <!--                  <font-awesome-icon-->
+              <!--                    :icon="['fab', 'instagram']"-->
+              <!--                    style="color: #8a3ab9"-->
+              <!--                  />-->
+              <!--                  <span> Instagram </span>-->
+              <!--                </a>-->
+              <!--              </li>-->
             </ul>
           </b-col>
         </b-row>

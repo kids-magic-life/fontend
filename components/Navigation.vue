@@ -5,7 +5,7 @@
         <b-col sm="8" md="8" lg="3" no-gutters>
           <div class="main-logo">
             <nuxt-link to="/">
-              <b-img center src="/images/logo.png" alt="" width="80px" />
+              <b-img center src="/images/logo.png" alt="" width="100px" />
             </nuxt-link>
           </div>
         </b-col>
@@ -19,7 +19,7 @@
               <li><nuxt-link to="/about-us">About Us</nuxt-link></li>
               <li><nuxt-link to="/live-shows">Shows</nuxt-link></li>
               <li><nuxt-link to="/education">Education</nuxt-link></li>
-              <li><nuxt-link to="/">Products</nuxt-link></li>
+              <li><nuxt-link to="/products">Products</nuxt-link></li>
               <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
               <li><nuxt-link to="/contact-us">Contact Us</nuxt-link></li>
               <li v-if="user != null" class="dropdown">
