@@ -39,6 +39,7 @@
               <div class="card-block">
                 <div class="form-group">
                   <input
+                    v-model="title"
                     type="text"
                     class="form-control input-lg"
                     placeholder="Title"
@@ -56,12 +57,26 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input-desc">Description</label>
-                  <textarea id="input-desc" class="form-control" rows="3" />
+                  <label for="input-desc">
+                    Description
+                  </label>
+                  <textarea
+                    id="input-desc"
+                    v-model="description"
+                    class="form-control"
+                    rows="3"
+                  />
                 </div>
 
                 <a class="theme-btn btn" @click="doUpload()">
-                  <strong style="color: #ffffff"> UPLOAD </strong>
+                  <strong
+                    style="color: #ffffff"
+                    :disbaled="
+                      title == null || description == null || file == null
+                    "
+                  >
+                    UPLOAD
+                  </strong>
                 </a>
               </div>
             </div>
@@ -98,7 +113,9 @@ export default {
         acceptedFiles: 'image/*',
         autoProcessQueue: false
       },
-      file: null
+      file: null,
+      title: null,
+      description: null
     }
   },
   methods: {
@@ -113,8 +130,8 @@ export default {
         .mutate({
           mutation: ADD_IMAGE,
           variables: {
-            title: 'Title',
-            description: 'Description',
+            title: this.title,
+            description: this.description,
             file: this.file[0]
           }
         })

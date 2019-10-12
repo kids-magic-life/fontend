@@ -85,7 +85,7 @@
                 >
                   <font-awesome-icon
                     :icon="['fab', 'facebook-square']"
-                    style="color: #3b5998"
+                    style="color: #3b5998; font-size: 20px;"
                   />
                   <span> Facebook </span>
                 </a>
@@ -97,7 +97,7 @@
                 >
                   <font-awesome-icon
                     :icon="['fab', 'youtube']"
-                    style="color: #c4302b"
+                    style="color: #c4302b; font-size: 17px;"
                   />
                   <span> YouTube </span>
                 </a>
@@ -109,7 +109,7 @@
                 >
                   <font-awesome-icon
                     :icon="['fab', 'amazon']"
-                    style="color: #232f3e"
+                    style="color: #232f3e; font-size: 20px;"
                   />
                   <span> Amazon </span>
                 </a>

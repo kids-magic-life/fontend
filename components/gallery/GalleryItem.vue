@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="product-box">
+    <div
+      class="product-box"
+      @mouseover="hovering = true"
+      @mouseleave="hovering = false"
+    >
       <div class="product-media">
-        <b-img-lazy
-          class="prod-img"
-          alt=""
-          :src="'http://localhost:9000/' + image.location"
-        />
+        <b-img-lazy class="prod-img" alt="" :src="image.location" />
       </div>
 
       <div class="product-caption">
@@ -20,6 +20,16 @@
         </h3>
       </div>
     </div>
+
+    <b-badge
+      v-show="hovering"
+      variant="danger"
+      style="top: 30px; right: 0px; position: absolute; cursor: pointer;"
+      @mouseover="hovering = true"
+      @mouseleave="hovering = false"
+    >
+      Delete
+    </b-badge>
   </div>
 </template>
 
@@ -36,8 +46,12 @@ export default {
   data() {
     return {
       show: false,
-      moment: this.$moment
+      moment: this.$moment,
+      hovering: false
     }
+  },
+  methods: {
+    delete: function() {}
   }
 }
 </script>
