@@ -6,13 +6,13 @@ const contact = {
       port: 465,
       secure: true,
       auth: {
-        user: 'kaka55haha@gmail.com',
-        pass: 'Slowlearner1'
+        user: 'kidsmagiclifeaustralia@gmail.com',
+        pass: 'Kakaka123'
       }
     })
 
     const mailOptions = {
-      from: 'KidsMagicLife Company <MyName>', // sender address
+      from: 'KidsMagicLife Production<MyName>', // sender address
       to: email, // list of receivers
       subject: title, // Subject line
       text: message // plain text body
