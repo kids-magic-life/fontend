@@ -110,7 +110,11 @@ export default {
         email: this.email,
         name: this.name,
         title: this.title,
-        message: this.message
+        message:
+          this.name +
+          ', \n Thank you for getting in touch! We appreciate you contacting us. We will get back in touch with you soon! \nHave a great day! \n\n\nYour message was sent to us:\n "' +
+          this.message +
+          '"'
       }
       this.loading = true
       axios
@@ -256,6 +260,7 @@ span {
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column,
+  column1,
   input[type='submit'] {
     float: none;
     min-width: 100%;
