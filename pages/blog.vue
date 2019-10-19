@@ -19,45 +19,32 @@
       <!--    </div>-->
       <!--  <h1>No posts: {{ pagePosts.length }}</h1>  -->
       <!---- Load POSTS-------------------------------------------->
-      <div v-if="pagePosts.length !== 0">
-        <div
-          v-for="item in pagePosts"
-          :key="item.id"
-          class="fb-post"
-          :src="renderLink(item.id)"
-          data-width="100%"
-        ></div>
-
-        <iframe
-          v-for="item in pagePosts"
-          :key="item.id"
-          :src="renderLink(item.id)"
-          width="48%"
-          style="border:1px solid #eeeeee; margin: 10px "
-          scrolling="no"
-          frameborder="0"
-          allowTransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-        <hr style="margin: 20px; width: 100%" />
+      <div v-if="pagePosts.length !== 0" class="list-blog">
+        <div v-for="item in pagePosts" :key="item.id" class="item">
+          <div
+            class="fb-post"
+            :data-href="renderPermaLinkUrl(item.id)"
+            data-width="100%"
+          ></div>
+        </div>
       </div>
-      <!--    <ul>-->
-      <!--      <li v-for="item in pagePosts" :key="item.id">-->
-      <!--        <p>Id: {{ item.id }} - Created Time: {{ item.created_time }}</p>-->
-      <!--        <p>Content: {{ item.message }}</p>-->
-      <!--      </li>-->
-      <!--    </ul>-->
     </div>
+    <loading :class="{ show: isLoading }" />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import config from '../config/index.js'
+import Loading from '../components/Loading'
 export default {
   name: 'Blog',
+  components: {
+    Loading
+  },
   data() {
     return {
+      isLoading: true,
       result: null,
       pageInfor: null,
       pagePosts: []
@@ -66,12 +53,52 @@ export default {
   created() {
     this.getPagePosts()
     this.getPageInfor()
+    // this.getPermalinkUrl()
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const oldScript = document.getElementById('facebook-sdk')
+      // if(oldScript) oldScript.remove()
+      if (!oldScript) {
+        const script = document.createElement('script')
+        script.setAttribute('id', 'facebook-sdk')
+        script.setAttribute('async', true)
+        script.setAttribute('defer', true)
+        script.setAttribute('crossorigin', 'anonymous')
+        script.setAttribute(
+          'src',
+          'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2'
+        )
+        window.setTimeout(() => {
+          document.querySelector('body').append(script)
+          this.isLoading = false
+        }, 1000)
+      }
+    })
   },
   methods: {
+    // getPermalinkUrl() {
+
+    //   axios
+    //     .get(
+    //       `https://graph.facebook.com/page-id-xxxx/feed?fields=permalink_url&access_token=${
+    //         config.TOKEN
+    //       }`
+    //     )
+    //     .then(res => {
+    //       window.console.log(res)
+    //       // if (res.status === 200) this.pagePosts = res.data.data
+    //     })
+    // },
     renderLink(fullId) {
       const postid = fullId.split('_')[1]
       const pageid = fullId.split('_')[0]
       return `https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D${postid}%26id%3D${pageid}`
+    },
+    renderPermaLinkUrl(fullId) {
+      const postid = fullId.split('_')[1]
+      const pageid = fullId.split('_')[0]
+      return `https://www.facebook.com/${pageid}/posts/${postid}/`
     },
     getPagePosts() {
       axios
@@ -114,7 +141,27 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
+.list-blog {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  padding: 50px 0;
+}
+.list-blog .item {
+  width: 50%;
+  flex-basis: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+.list-blog .item > .fb-post,
+.list-blog .item > .fb-post span,
+.list-blog .item > .fb-post iframe {
+  width: 100% !important;
+}
 input[type='submit'] {
   background-color: #009900;
   color: white;
@@ -127,5 +174,11 @@ input[type='submit'] {
 
 input[type='submit']:hover {
   background-color: #045d04fa;
+}
+@media only screen and (max-width: 767px) {
+  .list-blog .item {
+    width: 100%;
+    flex-basis: 100%;
+  }
 }
 </style>
