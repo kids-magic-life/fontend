@@ -53,18 +53,16 @@ export const getters = {
 }
 
 export const mutations = {
-  LOGIN(state, status) {
+  async LOGIN(state, status) {
     state.user = status.user
     state.token = status.token
     state.authenticated = true
-    this.$apolloHelpers.onLogin(status.token)
-    // eslint-disable-next-line no-console
-    console.log(state)
+    await this.$apolloHelpers.onLogin(status.token)
   },
-  LOGOUT(state) {
+  async LOGOUT(state) {
     state.user = null
     state.token = null
     state.authenticated = false
-    this.$apolloHelpers.onLogout()
+    await this.$apolloHelpers.onLogout()
   }
 }

@@ -1179,6 +1179,8 @@ blockquote {
   position: absolute;
   z-index: 1;
   object-fit: fill;
+  height: 100%;
+  width: auto;
 }
 
 .price del {

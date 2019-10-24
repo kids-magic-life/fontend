@@ -16,7 +16,7 @@
           </a>
         </h3>
         <div class="price">
-          <strong class="clr-txt"> ${{ product.price | currency }} </strong>
+          <strong class="clr-txt"> ${{ product.price }} </strong>
           <!--          <del class="light-font">-->
           <!--            {{ (product.price * 1.5) | currency }}-->
           <!--          </del>-->

@@ -12,7 +12,7 @@
           <div class="tbl-cell">
             <div class="slide-caption container text-center">
               <div class="slide-title">
-                <img src="/logo.png" alt="" />
+                <img src="/images/logo.png" width="300px" alt="" />
               </div>
               <div class="slide-title2 pb-50">
                 <h2 class="section-title">

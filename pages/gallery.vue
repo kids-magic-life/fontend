@@ -65,18 +65,6 @@
                 ></gallery-item>
               </b-col>
             </div>
-
-            <!--            <div class="rel-div pt-50">-->
-            <!--              <div class="divider-full-1"></div>-->
-            <!--              <div class="nav-page" style="display: inline-flex;">-->
-            <!--                <a :disabled="pagination.current <= 1" @click="addPage(-1)">-->
-            <!--                  <font-awesome-icon icon="arrow-left" class="left" />-->
-            <!--                </a>-->
-            <!--                <a @click="addPage(1)">-->
-            <!--                  <font-awesome-icon icon="arrow-right" class="right" />-->
-            <!--                </a>-->
-            <!--              </div>-->
-            <!--            </div>-->
           </div>
         </div>
       </b-container>
@@ -119,7 +107,7 @@ export default {
       user: 'auth/user'
     })
   },
-  mounted() {
+  created() {
     this.$apollo
       .query({
         query: GET_GALLERY_IMAGES
@@ -128,6 +116,8 @@ export default {
         this.images = data.images
       })
       .catch(error => {
+        // eslint-disable-next-line no-console
+        console.log(error)
         this.errors = error.graphQLErrors.map(error => error)
       })
   },
