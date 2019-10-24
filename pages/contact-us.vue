@@ -78,11 +78,19 @@
           </h3>
           <h6 class="sub-title-1 text-center">Musical Production</h6>
 
-          <div class="contact-form pt-50">
+          <div ref="emailContainer" class="contact-form pt-50">
+            <b-alert v-model="alert" variant="success" dismissible>
+              Message Sent Successfully!
+            </b-alert>
+
+            <b-alert v-model="error" variant="danger" dismissible>
+              Oops! Something went wrong!
+            </b-alert>
             <form id="contact-form" class="contact-form row">
               <b-col sm="4" class="form-group">
                 <input
                   id="Name"
+                  v-model="name"
                   class="form-control"
                   placeholder="Name"
                   name="Name"
@@ -93,6 +101,7 @@
               <b-col sm="4" class="form-group">
                 <input
                   id="Email"
+                  v-model="email"
                   class="form-control"
                   placeholder="Email"
                   name="Email"
@@ -103,6 +112,7 @@
               <b-col sm="4" class="form-group">
                 <input
                   id="Phone"
+                  v-model="phone"
                   class="form-control"
                   placeholder="Phone"
                   name="Phone"
@@ -112,6 +122,7 @@
               <b-col sm="12" class="form-group">
                 <textarea
                   id="Message"
+                  v-model="message"
                   class="form-control"
                   placeholder="Message"
                   name="Message"
@@ -120,7 +131,11 @@
                 ></textarea>
               </b-col>
               <b-col sm="12" class="form-group text-center pt-15">
-                <button class="theme-btn" type="submit">
+                <button
+                  class="theme-btn"
+                  type="submit"
+                  @click.prevent="handleSubmit()"
+                >
                   <strong> SEND EMAIL </strong>
                 </button>
               </b-col>
@@ -133,8 +148,52 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: 'ContactUs'
+  name: 'ContactUs',
+  data() {
+    return {
+      name: null,
+      email: null,
+      phone: null,
+      message: null,
+      alert: false,
+      error: false
+    }
+  },
+  methods: {
+    handleSubmit() {
+      const loading = this.$loading.show({
+        container: this.$refs.emailContainer
+      })
+
+      axios
+        .post('http://localhost:3000/api/sendMail', {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          message: this.message
+        })
+        .then(response => {
+          this.loading = false
+          this.name = null
+          this.email = null
+          this.phone = null
+          this.message = null
+          this.alert = true
+          loading.hide()
+        })
+        .catch(error => {
+          this.loading = false
+          this.error = true
+          loading.hide()
+
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    }
+  }
 }
 </script>
 

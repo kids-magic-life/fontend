@@ -14,7 +14,7 @@
           <a href="#" @click="show = true">
             <span class="light-font"> {{ image.title }} </span>
             <i class="mini-font">
-              {{ moment(image.CreatedAt).format('D-MM-YYYY') }}
+              {{ moment(image.CreatedAt).format('DD MMM YYYY') }}
             </i>
           </a>
         </h3>
@@ -27,6 +27,7 @@
       style="top: 30px; right: 0px; position: absolute; cursor: pointer;"
       @mouseover="hovering = true"
       @mouseleave="hovering = false"
+      @click="doDelete()"
     >
       Delete
     </b-badge>
@@ -34,6 +35,8 @@
 </template>
 
 <script>
+import DELETE_IMAGE from '@/graphql/DELETE_IMAGE'
+
 export default {
   name: 'GalleryItem',
   props: {
@@ -51,7 +54,22 @@ export default {
     }
   },
   methods: {
-    delete: function() {}
+    doDelete() {
+      this.$apollo
+        .mutate({
+          mutation: DELETE_IMAGE,
+          variables: {
+            id: this.image.id
+          }
+        })
+        .then(({ data }) => {
+          this.$emit('image-remove', data.id)
+        })
+        .catch(error => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    }
   }
 }
 </script>

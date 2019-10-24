@@ -1,0 +1,8 @@
+mutation removeImage($id: String!) {
+  removeImage(id: $id) {
+    id
+    description
+    title
+    location
+  }
+}

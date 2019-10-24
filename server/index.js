@@ -1,5 +1,7 @@
 const Koa = require('koa')
+const bodyParser = require('koa-bodyparser')
 const consola = require('consola')
+const api = require('./api/index')
 const { Nuxt, Builder } = require('nuxt')
 
 const app = new Koa()
@@ -25,11 +27,29 @@ async function start() {
     await nuxt.ready()
   }
 
-  app.use(ctx => {
-    ctx.status = 200
-    ctx.respond = false // Bypass Koa's built-in response handling
-    ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtServerInit or with nuxt-stash
-    nuxt.render(ctx.req, ctx.res)
+  app.use(bodyParser())
+  app.use(async ctx => {
+    if (ctx.request.url === '/api/sendMail' && ctx.request.method === 'POST') {
+      const result = await api.contact.sendMail(ctx.request.body)
+      if (result) {
+        ctx.status = 200
+        ctx.body = {
+          status: 200,
+          message: 'Your message successfully sent!'
+        }
+      } else {
+        ctx.status = 500
+        ctx.body = {
+          status: 500,
+          error: 'ERROR!!'
+        }
+      }
+    } else {
+      ctx.status = 200
+      ctx.respond = false // Bypass Koa's built-in response handling
+      ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtServerInit or with nuxt-stash
+      nuxt.render(ctx.req, ctx.res)
+    }
   })
 
   app.listen(port, host)

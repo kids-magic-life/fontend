@@ -59,33 +59,40 @@
                 md="4"
                 lg="3"
               >
-                <gallery-item :image="image"></gallery-item>
+                <gallery-item
+                  :image="image"
+                  @image-remove="remove"
+                ></gallery-item>
               </b-col>
             </div>
 
-            <div class="rel-div pt-50">
-              <div class="divider-full-1"></div>
-              <div class="nav-page" style="display: inline-flex;">
-                <a :disabled="pagination.current <= 1" @click="addPage(-1)">
-                  <font-awesome-icon icon="arrow-left" class="left" />
-                </a>
-                <a @click="addPage(1)">
-                  <font-awesome-icon icon="arrow-right" class="right" />
-                </a>
-              </div>
-            </div>
+            <!--            <div class="rel-div pt-50">-->
+            <!--              <div class="divider-full-1"></div>-->
+            <!--              <div class="nav-page" style="display: inline-flex;">-->
+            <!--                <a :disabled="pagination.current <= 1" @click="addPage(-1)">-->
+            <!--                  <font-awesome-icon icon="arrow-left" class="left" />-->
+            <!--                </a>-->
+            <!--                <a @click="addPage(1)">-->
+            <!--                  <font-awesome-icon icon="arrow-right" class="right" />-->
+            <!--                </a>-->
+            <!--              </div>-->
+            <!--            </div>-->
           </div>
         </div>
       </b-container>
 
       <!--      UPLOAD IMAGE MODAL      -->
-      <gallery-upload-modal :show.sync="show"></gallery-upload-modal>
+      <gallery-upload-modal
+        :show.sync="show"
+        @image-upload="addImage"
+      ></gallery-upload-modal>
     </section>
   </main>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import _ from 'lodash'
 import GET_GALLERY_IMAGES from '~/graphql/GET_GALLERY_IMAGES'
 import GalleryItem from '~/components/gallery/GalleryItem'
 import GalleryUploadModal from '../components/gallery/GalleryUploadModal'
@@ -113,26 +120,26 @@ export default {
     })
   },
   mounted() {
-    // const loading = this.$loading.show({
-    //   container: this.$refs.gallery
-    // })
-
     this.$apollo
       .query({
         query: GET_GALLERY_IMAGES
       })
       .then(({ data }) => {
         this.images = data.images
-        // loading.hide()
       })
       .catch(error => {
         this.errors = error.graphQLErrors.map(error => error)
-        // loading.hide()
       })
   },
   methods: {
-    addPage: function(amount) {
-      this.pagination.current += amount
+    addImage: function(data) {
+      this.images.push(data)
+      // eslint-disable-next-line no-console
+      console.log('data', data)
+    },
+    remove(id) {
+      const index = _.findIndex(this.images, image => image.id === id)
+      this.images.splice(index, 1)
     }
   }
 }

@@ -1172,14 +1172,13 @@ blockquote {
 }
 
 .product-media > .prod-img {
-  max-width: 168px;
-  width: 168px;
   bottom: 0;
   margin: auto;
   left: 0;
   right: 0;
   position: absolute;
   z-index: 1;
+  object-fit: fill;
 }
 
 .price del {

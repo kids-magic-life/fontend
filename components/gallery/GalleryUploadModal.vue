@@ -68,16 +68,17 @@
                   />
                 </div>
 
-                <a class="theme-btn btn" @click="doUpload()">
-                  <strong
-                    style="color: #ffffff"
-                    :disbaled="
-                      title == null || description == null || file == null
-                    "
-                  >
+                <button
+                  class="theme-btn btn"
+                  :disbaled="
+                    title == null || description == null || file == null
+                  "
+                  @click="doUpload()"
+                >
+                  <strong style="color: #ffffff;">
                     UPLOAD
                   </strong>
-                </a>
+                </button>
               </div>
             </div>
           </b-col>
@@ -119,30 +120,37 @@ export default {
     }
   },
   methods: {
+    reset() {
+      this.file = null
+      this.title = null
+      this.description = null
+    },
     addFile(file) {
       this.file = file
     },
     doUpload() {
-      // eslint-disable-next-line no-console
-      console.log(this.file)
-
-      this.$apollo
-        .mutate({
-          mutation: ADD_IMAGE,
-          variables: {
-            title: this.title,
-            description: this.description,
-            file: this.file[0]
-          }
-        })
-        .then(result => {
-          // eslint-disable-next-line no-console
-          console.log(result)
-        })
-        .catch(error => {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
+      if (this.title != null || this.description != null || this.file != null) {
+        this.$apollo
+          .mutate({
+            mutation: ADD_IMAGE,
+            variables: {
+              title: this.title,
+              description: this.description,
+              file: this.file[0]
+            }
+          })
+          .then(({ data }) => {
+            this.$emit('image-upload', data.addImage)
+            this.$emit('update:show', false)
+            this.reset()
+          })
+          .catch(error => {
+            // eslint-disable-next-line no-console
+            console.log(error)
+            this.$emit('update:show', false)
+            this.reset()
+          })
+      }
     }
   }
 }
@@ -240,6 +248,10 @@ export default {
   width: 100%;
   max-width: 120px;
   float: right;
+}
+
+button:disabled {
+  cursor: unset;
 }
 
 .help-block {
