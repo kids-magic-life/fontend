@@ -50,9 +50,9 @@
         <div class="title-wrap pt-15">
           <h2 class="fsz-20 over-txt-title">
             <span class="light-font">
-              WELCOME TO
+              Welcome to
             </span>
-            <strong>LIFE COACHING OF KIDS MAGIC LIFE</strong>
+            <strong>Kid Magic Life</strong>
           </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at
