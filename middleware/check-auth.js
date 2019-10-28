@@ -6,7 +6,7 @@ export default async function({ app, store, req }) {
         token: app.$apolloHelpers.getToken()
       })
     } else {
-      await app.store.commit('auth/logout')
+      await app.store.commit('auth/LOGOUT')
     }
   }
 }

@@ -24,7 +24,7 @@
     <b-badge
       v-show="hovering"
       variant="danger"
-      style="top: 30px; right: 0px; position: absolute; cursor: pointer;"
+      style="top: 30px; right: 0px; position: absolute; cursor: pointer; z-index: 999;"
       @mouseover="hovering = true"
       @mouseleave="hovering = false"
       @click="doDelete()"

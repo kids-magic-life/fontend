@@ -18,12 +18,6 @@
               </p>
               <ul>
                 <li>
-                  <font-awesome-icon icon="map-marked" size="xs" />
-                  <span>
-                    South Road, Bentleigh, Melbourne, Australia
-                  </span>
-                </li>
-                <li>
                   <font-awesome-icon icon="envelope" size="xs" />
                   <span> kidsmagiclife@gmail.com</span>
                 </li>

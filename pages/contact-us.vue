@@ -25,7 +25,7 @@
                     id="gmap_canvas"
                     width="100%"
                     height="500px"
-                    src="https://maps.google.com/maps?q=South%20Road%2C%20Bentleigh%2C%20Melbourne%2C%20Australia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=Melbourne%2C%20Australia&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     frameborder="0"
                     scrolling="no"
                     marginheight="0"
@@ -44,9 +44,6 @@
                 <strong>Address </strong>
               </h3>
               <h6 class="sub-title-1 pb-15">Musical Production</h6>
-
-              <h5 class="clr-txt fsz-12 pt-15">Kids Magic Life</h5>
-              <p>South Road, Bentleigh, Melbourne, Australia</p>
 
               <ul>
                 <li><strong>Call: </strong> <i>0415 373 996</i></li>
