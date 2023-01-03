@@ -29,7 +29,7 @@
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "nodemailer": "^6.3.1",
-    "nuxt": "^2.10.2",
+    "nuxt": "^2.15.8",
     "nuxt-dropzone": "^1.0.4",
     "nuxt-fontawesome": "^0.4.0",
     "vue-loading-overlay": "^3.2.0",
@@ -59,6 +59,6 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
-    "vue-jest": "^3.0.3"
+    "vue-jest": "^4.0.1"
   }
 }
